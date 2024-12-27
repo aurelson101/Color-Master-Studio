@@ -52,6 +52,8 @@ The application uses browser local storage to:
 - Save color palettes
 - Remember theme preference
 
-## License
+# Color Master Studio
 
-MIT License - Feel free to use in personal and commercial projects.
+![Color Master Studio](https://i.ibb.co/YcWjKjf/color-master-studio.jpg)
+
+
