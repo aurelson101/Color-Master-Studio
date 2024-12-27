@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Color Master Studio - Professional color management tool">
+    <title>Color Master Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <header>
+            <h1>Color Master Studio</h1>
+        </header>
+        
+        <div class="theme-toggle">
+            <label class="theme-switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <span class="theme-label">Dark Mode</span>
+        </div>
+
+        <section class="saved-colors-section">
+            <h2>Saved Colors</h2>
+            <div class="saved-colors" id="savedColors"></div>
+        </section>
+    </aside>
+
+    <main class="main-content">
+        <section class="color-picker-section">
+            <div class="color-card">
+                <div class="color-preview" id="colorPreview"></div>
+                
+                <div class="sliders-container">
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Hue (H)</span>
+                            <span id="hueValue">0°</span>
+                        </div>
+                        <input type="range" min="0" max="360" value="0" class="color-slider" id="hueSlider">
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Saturation (S)</span>
+                            <span id="saturationValue">100%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="100" class="color-slider" id="saturationSlider">
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Lightness (L)</span>
+                            <span id="lightnessValue">50%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="color-slider" id="lightnessSlider">
+                    </div>
+                </div>
+
+                <div class="color-actions">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" id="saveColor">Save</button>
+                        <button class="btn btn-secondary" id="randomColor">Random</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="color-formats">
+            <div class="color-card">
+                <h2>Color Formats</h2>
+                <div class="code-preview" id="colorFormats"></div>
+            </div>
+        </section>
+
+        <section class="color-harmonies">
+            <div class="color-card">
+                <h2>Color Harmonies</h2>
+                <div class="harmonies" id="harmonies"></div>
+            </div>
+        </section>
+
+        <section class="export-section">
+            <div class="color-card">
+                <h2>Export</h2>
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="exportCSS">CSS</button>
+                    <button class="btn btn-primary" id="exportSCSS">SCSS</button>
+                    <button class="btn btn-primary" id="exportJSON">JSON</button>
+                </div>
+                <div class="code-preview" id="exportPreview"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="colorUtils.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
